@@ -3,7 +3,7 @@ from raptor.core.log import error
 from raptor.doctor.checks.check import Check
 from raptor.doctor.checks.git import GitCheck
 from raptor.doctor.checks.git_hooks import GitHooksCheck
-from raptor.doctor.checks.intricate import IntricateCheck
+from raptor.doctor.checks.raptor import RaptorCheck
 from raptor.doctor.checks.doxygen import DoxygenCheck
 from raptor.doctor.checks.vulkan import VulkanCheck
 from raptor.doctor.checks.vulkan_driver import VulkanDriverCheck
@@ -20,7 +20,7 @@ def get_checks() -> list[Check]:
         "doxygen": DoxygenCheck,
         "git": GitCheck,
         "git-hooks": GitHooksCheck,
-        "intricate": IntricateCheck,
+        "raptor": RaptorCheck,
         "vulkan": VulkanCheck,
         "vulkan-driver": VulkanDriverCheck,
         "visualstudio": VisualStudioCheck,
@@ -44,7 +44,7 @@ def get_checks() -> list[Check]:
 def type_id_to_check(type_id: str) -> Check | None:
     _CHECK_TYPE_MAP: dict[str, type[Check]] = {
         GitCheck().type_id: GitCheck,
-        IntricateCheck().type_id: IntricateCheck,
+        RaptorCheck().type_id: RaptorCheck,
         GitHooksCheck().type_id: GitHooksCheck,
         DoxygenCheck().type_id: DoxygenCheck,
         VulkanCheck().type_id: VulkanCheck,

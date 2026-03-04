@@ -5,25 +5,25 @@ from raptor.core.validation import ValidationResult, Severity
 from raptor.doctor.checks.check import Check
 
 
-class IntricateCheck(Check):
-    type_id = "IntricateCheck"
-    name = "Intricate-DevTools"
-    description = "Validates this installation of Intricate-raptor."
+class RaptorCheck(Check):
+    type_id = "RaptorCheck"
+    name = "Intricate-Raptor"
+    description = "Validates this installation of Intricate-Raptor."
 
     def validate(self) -> ValidationResult:
         root = repo_root()
         devtools_dir = str(tools_dir() / "DevTools").replace('\\', '/')
 
-        installed_ver = run(["intricate", "--version"], cwd = root, capture = True)
+        installed_ver = run(["repo", "--version"], cwd = root, capture = True)
         repo_ver = run(["python", "-c",
-                        f"import sys; sys.path.insert(0, '{devtools_dir}'); import devtools; print(raptor.__version__)"],
+                        f"import sys; sys.path.insert(0, '{devtools_dir}'); import raptor; print(raptor.__version__)"],
                         cwd = root, capture = True)
 
         if installed_ver != repo_ver:
             return ValidationResult(
                 valid = False,
                 severity = Severity.ERROR,
-                message = "Incorrect Intricate-DevTools version installed!"
+                message = "Incorrect Intricate-Raptor version installed!"
             )
 
         return ValidationResult(
@@ -33,6 +33,8 @@ class IntricateCheck(Check):
 
     def fix(self) -> bool:
         root = repo_root()
-        res = run(["python", "-m", "pip", "install", f"\"{tools_dir() / "DevTools"}\"", "--quiet"], cwd = root, capture = True)
+
+        # TODO: This is incorrect, must be installed from PyPI!
+        res = run(["python", "-m", "pip", "install", f"\"{tools_dir() / "raptor"}\"", "--quiet"], cwd = root, capture = True)
 
         return len(res) != 0
