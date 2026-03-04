@@ -1,4 +1,4 @@
-from devtools.core.log import command, error
+from raptor.core.log import command, error
 import subprocess
 from subprocess import CompletedProcess
 from pathlib import Path

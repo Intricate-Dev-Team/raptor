@@ -1,5 +1,5 @@
-from devtools.core.log import error
-from devtools.hooks.registry import HOOK_REGISTRY
+from raptor.core.log import error
+from raptor.hooks.registry import HOOK_REGISTRY
 import typer
 
 

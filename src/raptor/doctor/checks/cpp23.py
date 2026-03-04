@@ -1,7 +1,7 @@
-from devtools.core.fs import vswhere_path, tmp_dir
-from devtools.core.process import run_ex
-from devtools.core.validation import ValidationResult, Severity
-from devtools.doctor.checks.check import Check
+from raptor.core.fs import vswhere_path, tmp_dir
+from raptor.core.process import run_ex
+from raptor.core.validation import ValidationResult, Severity
+from raptor.doctor.checks.check import Check
 from pathlib import Path
 import json
 

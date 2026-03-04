@@ -1,6 +1,6 @@
-from devtools.config.loader import CONFIG
-from devtools.core.log import info
-from devtools.setup import dotnet, doxygen, git, hooks, vulkan
+from raptor.config.loader import CONFIG
+from raptor.core.log import info
+from raptor.setup import dotnet, doxygen, git, hooks, vulkan
 import typer
 
 

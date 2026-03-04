@@ -1,7 +1,7 @@
-from devtools.core.log import info, warn, error, critical, _log
-from devtools.core.validation import Severity
-from devtools.doctor.checks.check import Check
-from devtools.doctor.registry import get_checks, type_id_to_check
+from raptor.core.log import info, warn, error, critical, _log
+from raptor.core.validation import Severity
+from raptor.doctor.checks.check import Check
+from raptor.doctor.registry import get_checks, type_id_to_check
 import json
 import os
 import typer

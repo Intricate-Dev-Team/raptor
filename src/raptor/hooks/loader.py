@@ -1,5 +1,5 @@
-from devtools.core.fs import hooks_dir
-from devtools.core.log import error
+from raptor.core.fs import hooks_dir
+from raptor.core.log import error
 import importlib.util
 
 

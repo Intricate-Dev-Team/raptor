@@ -1,4 +1,4 @@
-from devtools.core.validation import ValidationResult, Severity
+from raptor.core.validation import ValidationResult, Severity
 from abc import ABC, abstractmethod
 from typing import Optional
 

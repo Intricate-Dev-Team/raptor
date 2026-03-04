@@ -1,9 +1,9 @@
-from devtools.config.loader import CONFIG
-from devtools.core.environ import where
-from devtools.core.log import trace, info, warn, error, critical, log_validation_result
-from devtools.core.net import download_file
-from devtools.core.process import run, run_and_wait
-from devtools.core.validation import ValidationResult, Severity
+from raptor.config.loader import CONFIG
+from raptor.core.environ import where
+from raptor.core.log import trace, info, warn, error, critical, log_validation_result
+from raptor.core.net import download_file
+from raptor.core.process import run, run_and_wait
+from raptor.core.validation import ValidationResult, Severity
 from packaging.version import parse as parse_ver, Version
 from pathlib import Path
 import re

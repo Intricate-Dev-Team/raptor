@@ -1,4 +1,4 @@
-from devtools.core.validation import ValidationResult, Severity
+from raptor.core.validation import ValidationResult, Severity
 import sys
 import typer
 import typer.colors

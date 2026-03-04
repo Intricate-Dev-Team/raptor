@@ -1,5 +1,5 @@
-from devtools.config.defines import CONFIG_FILE_NAME
-from devtools.core.log import critical
+from raptor.config.defines import CONFIG_FILE_NAME
+from raptor.core.log import critical
 from functools import cached_property
 from pathlib import Path
 from pydantic import BaseModel, Field

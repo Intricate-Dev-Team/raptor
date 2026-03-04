@@ -1,7 +1,7 @@
-from devtools.core.fs import doxygen_dir, docs_dir
-from devtools.core.git import repo_root
-from devtools.core.log import info, critical
-from devtools.core.process import run
+from raptor.core.fs import doxygen_dir, docs_dir
+from raptor.core.git import repo_root
+from raptor.core.log import info, critical
+from raptor.core.process import run
 import secrets
 import typer
 import webbrowser

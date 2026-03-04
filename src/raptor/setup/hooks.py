@@ -1,8 +1,8 @@
-from devtools.config.loader import CONFIG
-from devtools.core.git import hooks_dir as git_hooks_dir
-from devtools.core.log import trace, info, error, log_validation_result
-from devtools.core.validation import ValidationResult, Severity
-from devtools.hooks.registry import HOOK_REGISTRY
+from raptor.config.loader import CONFIG
+from raptor.core.git import hooks_dir as git_hooks_dir
+from raptor.core.log import trace, info, error, log_validation_result
+from raptor.core.validation import ValidationResult, Severity
+from raptor.hooks.registry import HOOK_REGISTRY
 from packaging.version import parse as parse_ver, Version
 from pathlib import Path
 import hashlib

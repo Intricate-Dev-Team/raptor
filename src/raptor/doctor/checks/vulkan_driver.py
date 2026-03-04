@@ -1,7 +1,7 @@
-from devtools.core.log import info
-from devtools.core.process import run_ex
-from devtools.core.validation import ValidationResult, Severity
-from devtools.doctor.checks.check import Check
+from raptor.core.log import info
+from raptor.core.process import run_ex
+from raptor.core.validation import ValidationResult, Severity
+from raptor.doctor.checks.check import Check
 import re
 
 

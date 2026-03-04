@@ -1,7 +1,7 @@
-from devtools.config.defines import CONFIG_FILE_NAME, CONFIG_FILE_VERSION
-from devtools.config.structs import IntricateConfigFile, IntricateConfig
-from devtools.core.git import repo_root
-from devtools.core.log import critical, warn
+from raptor.config.defines import CONFIG_FILE_NAME, CONFIG_FILE_VERSION
+from raptor.config.structs import IntricateConfigFile, IntricateConfig
+from raptor.core.git import repo_root
+from raptor.core.log import critical, warn
 from packaging.version import parse as parse_ver
 import tomllib
 
@@ -29,7 +29,7 @@ CONFIG: IntricateConfig = load_config()
 
 # Debug prints all configuration settings to check if they loaded properly
 def _debug_print_config():
-    from devtools.core.log import trace
+    from raptor.core.log import trace
 
     trace("intricate")
     trace(f"    version: {CONFIG.version}")

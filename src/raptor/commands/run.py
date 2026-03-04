@@ -1,6 +1,6 @@
-from devtools.config.loader import CONFIG
-from devtools.core.log import error
-from devtools.core.msbuild import build, build_and_run, run_project
+from raptor.config.loader import CONFIG
+from raptor.core.log import error
+from raptor.core.msbuild import build, build_and_run, run_project
 from pathlib import Path
 import typer
 

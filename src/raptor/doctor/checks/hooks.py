@@ -1,8 +1,8 @@
-from devtools.core.validation import ValidationResult
-from devtools.doctor.checks.check import Check
-import devtools.hooks.post_checkout as hook_pc
-import devtools.hooks.post_merge as hook_pm
-import devtools.hooks.post_rewrite as hook_pr
+from raptor.core.validation import ValidationResult
+from raptor.doctor.checks.check import Check
+import raptor.hooks.post_checkout as hook_pc
+import raptor.hooks.post_merge as hook_pm
+import raptor.hooks.post_rewrite as hook_pr
 
 
 class PostCheckoutHookCheck(Check):

@@ -1,6 +1,6 @@
-from devtools.core.validation import ValidationResult
-from devtools.doctor.checks.check import Check
-import devtools.setup.dotnet as dotnet
+from raptor.core.validation import ValidationResult
+from raptor.doctor.checks.check import Check
+import raptor.setup.dotnet as dotnet
 
 
 class DotNetCheck(Check):

@@ -1,5 +1,5 @@
-from devtools.config.loader import CONFIG
-from devtools.core.msbuild import build, clean
+from raptor.config.loader import CONFIG
+from raptor.core.msbuild import build, clean
 import typer
 
 

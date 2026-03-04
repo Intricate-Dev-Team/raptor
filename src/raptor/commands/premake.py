@@ -1,8 +1,8 @@
-from devtools.config.loader import CONFIG
-from devtools.core.fs import premake_path
-from devtools.core.git import repo_root
-from devtools.core.log import trace, info
-from devtools.core.process import run
+from raptor.config.loader import CONFIG
+from raptor.core.fs import premake_path
+from raptor.core.git import repo_root
+from raptor.core.log import trace, info
+from raptor.core.process import run
 import os
 import time
 import typer

@@ -1,14 +1,14 @@
-from devtools.core.fs import tools_dir
-from devtools.core.git import repo_root
-from devtools.core.process import run
-from devtools.core.validation import ValidationResult, Severity
-from devtools.doctor.checks.check import Check
+from raptor.core.fs import tools_dir
+from raptor.core.git import repo_root
+from raptor.core.process import run
+from raptor.core.validation import ValidationResult, Severity
+from raptor.doctor.checks.check import Check
 
 
 class IntricateCheck(Check):
     type_id = "IntricateCheck"
     name = "Intricate-DevTools"
-    description = "Validates this installation of Intricate-DevTools."
+    description = "Validates this installation of Intricate-raptor."
 
     def validate(self) -> ValidationResult:
         root = repo_root()
@@ -16,7 +16,7 @@ class IntricateCheck(Check):
 
         installed_ver = run(["intricate", "--version"], cwd = root, capture = True)
         repo_ver = run(["python", "-c",
-                        f"import sys; sys.path.insert(0, '{devtools_dir}'); import devtools; print(devtools.__version__)"],
+                        f"import sys; sys.path.insert(0, '{devtools_dir}'); import devtools; print(raptor.__version__)"],
                         cwd = root, capture = True)
 
         if installed_ver != repo_ver:
