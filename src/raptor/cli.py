@@ -16,7 +16,7 @@ app = typer.Typer()
 
 def print_version():
     try:
-        typer.echo(version("intricate-devtools"))
+        typer.echo(version("intricate-raptor"))
     except PackageNotFoundError:
         typer.echo("0.0.0")
 
@@ -34,7 +34,7 @@ def main(
         typer.echo(ctx.get_help())
         raise typer.Exit(1)
 
-    # Load Intricate hooks
+    # Load raptor hooks
     if ctx.invoked_subcommand in ["setup", "doctor", "hook"]:
         load_hooks()
 

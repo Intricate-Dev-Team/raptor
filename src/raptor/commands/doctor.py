@@ -7,15 +7,15 @@ import os
 import typer
 
 
-_DOCTOR_FILE = ".intricatedoctor"
+_DOCTOR_FILE = ".raptordoctor"
 
-app = typer.Typer(help = "Diagnose and fix issues with the IntricateEngine repository and your development environment.")
+app = typer.Typer(help = "Diagnose and fix issues with the repository and your development environment.")
 
 @app.command(help = "Perform a full diagnostic check and create report.")
 def diagnose():
     checks = get_checks()
 
-    info("Intricate Doctor Diagnostics")
+    info("Raptor Doctor Diagnostics")
     info("============================")
 
     with open(_DOCTOR_FILE, 'w') as f:
@@ -56,7 +56,7 @@ def fix(
             os.remove(_DOCTOR_FILE)
 
     if not os.path.exists(_DOCTOR_FILE):
-        critical(f"The {_DOCTOR_FILE} log file does not exist! Please run \"intricate doctor diagnose\" first.")
+        critical(f"The {_DOCTOR_FILE} log file does not exist! Please run \"raptor doctor diagnose\" first.")
         return
 
     must_fix: list[Check] = []

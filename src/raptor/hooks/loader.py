@@ -8,7 +8,7 @@ def load_hooks():
         return
 
     for hook_path in sorted(hooks_dir().glob("*.py")):
-        spec = importlib.util.spec_from_file_location(f"intricate_user_hook_{hook_path.name}", hook_path)
+        spec = importlib.util.spec_from_file_location(f"raptor_user_hook_{hook_path.name}", hook_path)
         if spec is None:
             error(f"Failed to load hook '{hook_path}'!")
             return

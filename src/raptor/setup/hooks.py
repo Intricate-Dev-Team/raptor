@@ -14,9 +14,9 @@ _HOOK_REQUIRED_VER: Version = Version(CONFIG.setup.get("git-hooks").min_version)
 
 _HOOK_TEMPLATE = """#!/bin/sh
 # {version}
-# Intricate DevTools Git Hook
+# Raptor Git Hook
 
-exec intricate hook run {hook_name} "$@"
+exec raptor hook run {hook_name} "$@"
 """
 
 def validate() -> ValidationResult:

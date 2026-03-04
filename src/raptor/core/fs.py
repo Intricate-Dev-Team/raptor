@@ -17,7 +17,7 @@ def msbuild_path() -> Path:
 
 @cache
 def hooks_dir() -> Path:
-    return repo_root() / ".intricate" / "hooks"
+    return repo_root() / ".raptor" / "hooks"
 
 @cache
 def tmp_dir() -> Path:

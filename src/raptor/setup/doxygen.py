@@ -99,7 +99,7 @@ def _check_doxygen_ver() -> bool:
         return False
 
     if parse_ver(doxygen_ver) < _DOXYGEN_REQUIRED_VER:
-        warn(f"You don't have the correct Doxygen version installed! (Intricate requires v{_DOXYGEN_REQUIRED_VER}).")
+        warn(f"You don't have the correct Doxygen version installed! (Project requires v{_DOXYGEN_REQUIRED_VER}).")
         return False
 
     return True

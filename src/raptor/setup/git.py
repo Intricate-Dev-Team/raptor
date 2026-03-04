@@ -115,7 +115,7 @@ def _check_git_ver(git_path: Path) -> bool:
 
     git_ver = match.group(1)
     if parse_ver(git_ver) < _GIT_REQUIRED_VER:
-        warn(f"The installed Git for Windows package v{git_ver} is too old! (Intricate requires v{_GIT_REQUIRED_VER} or newer).")
+        warn(f"The installed Git for Windows package v{git_ver} is too old! (Project requires v{_GIT_REQUIRED_VER} or newer).")
         return False
 
     return True

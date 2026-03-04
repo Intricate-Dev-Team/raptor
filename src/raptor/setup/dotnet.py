@@ -100,7 +100,7 @@ def _check_dotnet_ver(dotnet_path: Path) -> bool:
         return False
 
     if parse_ver(dotnet_ver) < _DOTNET_INSTALLER_VER:
-        warn(f"You don't have the correct .NET SDK version installed! (Intricate requires v{_DOTNET_INSTALLER_VER}).")
+        warn(f"You don't have the correct .NET SDK version installed! (Project requires v{_DOTNET_INSTALLER_VER}).")
         return False
 
     return True

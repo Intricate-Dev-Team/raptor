@@ -37,7 +37,7 @@ def _msbuild_solution(target: _BuildTargets, config: str, arch: str):
     sln = new_sln if new_sln.exists() else old_sln
 
     if not sln.exists():
-        critical(f"Neither '{new_sln.name}' nor '{old_sln.name}' could not be found! Please run \"intricate premake default\".")
+        critical(f"Neither '{new_sln.name}' nor '{old_sln.name}' could not be found! Please run \"raptor premake default\".")
         return
 
     run([msbuild, sln, "/restore", "/m", f"/t:{target}", f"/p:Configuration={config}", f"/p:Platform={arch}",
@@ -49,7 +49,7 @@ def _msbuild_project(prj_path: Path, target: _BuildTargets, config: str, arch: s
     prj = root / prj_path
 
     if not prj.exists():
-        critical(f"{prj.name} could not be found! Please run \"intricate premake default\".")
+        critical(f"{prj.name} could not be found! Please run \"raptor premake default\".")
         return
 
     run([msbuild, prj, "/restore", "/m", f"/t:{target}", f"/p:Configuration={config}",
@@ -61,7 +61,7 @@ def _msbuild_get_project_target_path(prj_path: Path, config: str, arch: str) -> 
     prj = root / prj_path
 
     if not prj.exists():
-        critical(f"{prj.name} could not be found! Please run \"intricate premake default\".")
+        critical(f"{prj.name} could not be found! Please run \"raptor premake default\".")
         return Path()
 
     return Path(run([msbuild, prj, f"/p:Configuration={config}", f"/p:Platform={arch}", "/getProperty:TargetPath"],

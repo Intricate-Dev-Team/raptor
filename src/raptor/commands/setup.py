@@ -4,7 +4,7 @@ from raptor.setup import dotnet, doxygen, git, hooks, vulkan
 import typer
 
 
-app = typer.Typer(help = "Setup the development environment and all Intricate's dependencies.")
+app = typer.Typer(help = "Setup the development environment and all project dependencies.")
 
 @app.command(name = "all", help = "Setup everything required for development.")
 def all():
@@ -26,7 +26,7 @@ def all():
         setup_doxygen(False)
 
     info("Setup complete.")
-    info("You may want to run \"intricate doctor diagnose\" to ensure your development environment is correctly setup.")
+    info("You may want to run \"raptor doctor diagnose\" to ensure your development environment is correctly setup.")
 
 if CONFIG.setup.git:
     @app.command(name = "git", help = "Setup Git for Windows.")

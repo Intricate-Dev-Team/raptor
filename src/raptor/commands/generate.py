@@ -42,13 +42,13 @@ def guid(
 
     info(f"Generated GUIDs:\n{'\n'.join(generated)}")
 
-@app.command(help = "Generate Intricate's documentation with Doxygen.")
+@app.command(help = "Generate project documentation with Doxygen.")
 def docs(open_browser: bool = typer.Option(False, "--open", "-o", help = "Open the generated documentation in the browser.")):
     root = repo_root()
     doxygen = doxygen_dir() / "doxygen.exe"
 
     if not doxygen.exists():
-        critical("doxygen.exe could not be found!\n Please run \"intricate setup doxygen\" to install Doxygen.")
+        critical("doxygen.exe could not be found!\n Please run \"raptor setup doxygen\" to install Doxygen.")
         return
 
     info("Running Doxygen...")

@@ -109,7 +109,7 @@ def _check_vk_ver(vk_path: Path) -> bool:
         return False
 
     if parse_ver(sdk_ver) < _VULKAN_INSTALLER_VER:
-        warn(f"You don't have the correct Vulkan SDK version installed! (Intricate requires v{_VULKAN_INSTALLER_VER}).")
+        warn(f"You don't have the correct Vulkan SDK version installed! (Project requires v{_VULKAN_INSTALLER_VER}).")
         return False
 
     return True

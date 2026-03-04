@@ -107,7 +107,7 @@ class CleanTarget(BaseModel):
 class CleanConfig(BaseModel):
     targets: dict[str, CleanTarget] = Field(default_factory = dict)
 
-class IntricateConfig(BaseModel):
+class RaptorConfig(BaseModel):
     version: str
     paths: PathsConfig
     setup: SetupConfig
@@ -116,5 +116,5 @@ class IntricateConfig(BaseModel):
     workspace: WorkspaceConfig
     clean: CleanConfig
 
-class IntricateConfigFile(BaseModel):
-    intricate: IntricateConfig
+class RaptorConfigFile(BaseModel):
+    raptor: RaptorConfig
