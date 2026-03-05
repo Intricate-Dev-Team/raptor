@@ -21,3 +21,8 @@ dependencies = [
 
 [project.scripts]
 raptor = "raptor.cli:app"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.4",
+]
