@@ -98,7 +98,7 @@ def _check_vk_ver(vk_path: Path) -> bool:
         sdk_output = run([os.path.normpath(f"{vk_path}/Bin/vulkanInfoSDK.exe")], capture=True)
         pos = sdk_output.find(VERSION_TOKEN) + len(VERSION_TOKEN)
         sdk_ver = sdk_output[pos : sdk_output.find("\n", pos)].strip()
-    except:
+    except Exception:
         error("No Vulkan ICD was found! The installed Vulkan drivers are either corrupt or this machine does not support Vulkan.")
         return False
 

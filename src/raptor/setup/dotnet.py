@@ -89,7 +89,7 @@ def _is_installed() -> bool:
 def _check_dotnet_ver(dotnet_path: Path) -> bool:
     try:
         dotnet_ver = run([(dotnet_path / "dotnet.exe"), "--version"], capture=True)
-    except:
+    except Exception:
         error("Failure running dotnet.exe! The installed .NET SDK is corrupt.")
         return False
 

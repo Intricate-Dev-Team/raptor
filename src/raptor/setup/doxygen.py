@@ -89,7 +89,7 @@ def _check_doxygen_ver() -> bool:
         # Example: 1.16.1 (669aeeefca743c148e2d935b3d3c69535c7491e6)
         doxygen_ver = run([_DOXYGEN_PATH, "--version"], capture=True)
         doxygen_ver = doxygen_ver[: doxygen_ver.find("(")].strip()
-    except:
+    except Exception:
         error("Failure running doxygen.exe! The installed version of Doxygen is corrupt.")
         return False
 

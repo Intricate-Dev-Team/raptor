@@ -91,7 +91,7 @@ def _is_installed() -> bool:
 def _check_git_ver(git_path: Path) -> bool:
     try:
         git_output = run([(git_path / "cmd" / "git.exe"), "--version"], capture=True)
-    except:
+    except Exception:
         error("Failure running git.exe! The installed Git for Windows package is corrupt.")
         return False
 

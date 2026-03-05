@@ -10,7 +10,8 @@ def download_file(url: str, target_path: Path):
     os.makedirs(os.path.dirname(target_path), exist_ok=True)
     with open(target_path, "wb") as f:
         headers = {
-            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/83.0.4103.97 Safari/537.36"
         }
         response = requests.get(url, headers=headers, stream=True)
         total = response.headers.get("content-length")
