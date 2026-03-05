@@ -4,12 +4,8 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
     branches: ["master", "main"]
-    paths:
-      - "**/*.py"
   push:
     branches: ["master", "main"]
-    paths:
-      - "**/*.py"
 
 permissions:
   contents: write
