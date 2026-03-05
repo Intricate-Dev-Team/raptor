@@ -24,7 +24,7 @@ def get_checks() -> list[Check]:
         "vulkan": VulkanCheck,
         "vulkan-driver": VulkanDriverCheck,
         "visualstudio": VisualStudioCheck,
-        "windows": WindowsCheck
+        "windows": WindowsCheck,
     }
 
     checks: list[Check] = []
@@ -41,6 +41,7 @@ def get_checks() -> list[Check]:
 
     return checks
 
+
 def type_id_to_check(type_id: str) -> Check | None:
     _CHECK_TYPE_MAP: dict[str, type[Check]] = {
         GitCheck().type_id: GitCheck,
@@ -52,7 +53,7 @@ def type_id_to_check(type_id: str) -> Check | None:
         DotNetCheck().type_id: DotNetCheck,
         VisualStudioCheck().type_id: VisualStudioCheck,
         WindowsCheck().type_id: WindowsCheck,
-        Cpp23Check().type_id: Cpp23Check
+        Cpp23Check().type_id: Cpp23Check,
     }
 
     if type_id not in _CHECK_TYPE_MAP:

@@ -26,8 +26,10 @@ def load_config() -> RaptorConfig:
 
     return parsed.raptor
 
+
 # Globally-accessible config settings
 CONFIG: RaptorConfig = load_config()
+
 
 # Debug prints all configuration settings to check if they loaded properly
 def _debug_print_config():
@@ -66,6 +68,7 @@ def _debug_print_config():
 
     trace("raptor.clean")
     trace(f"    targets: {CONFIG.clean.targets}")
+
 
 # Disabled by default
 # _debug_print_config()
