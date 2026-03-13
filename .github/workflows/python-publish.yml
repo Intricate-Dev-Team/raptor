@@ -16,7 +16,7 @@ jobs:
           
       - name: Setup uv
         run: |
-          chmod + x setup.sh
+          chmod +x setup.sh
           ./setup.sh
 
       - name: Build release distributions
