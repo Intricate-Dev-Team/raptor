@@ -1,29 +1,38 @@
 ###############################################################################
-# Normalize line endings using LF.
+# Normalize line endings using LF for text files.
 ###############################################################################
-* text eol=lf
+* text=auto eol=lf
 
 ###############################################################################
-# Behavior for binary files.
+# Binary files (never modify, never diff)
 ###############################################################################
-*.png   binary
-*.jpg   binary
-*.jpeg  binary
-*.bmp   binary
-*.gif   binary
-*.tga   binary
-*.psd   binary
-*.ico   binary
-*.ttf   binary
-*.pdf   binary
-*.mp3   binary
-*.aac   binary
-*.mp4   binary
-*.mkv   binary
-*.ts    binary
-*.exe   binary
-*.dll   binary
-*.lib   binary
-*.so    binary
-*.dylib binary
-*.solib binary
+*.png   -text
+*.jpg   -text
+*.jpeg  -text
+*.bmp   -text
+*.gif   -text
+*.tga   -text
+*.psd   -text
+*.ico   -text
+*.ttf   -text
+*.pdf   -text
+*.mp3   -text
+*.aac   -text
+*.mp4   -text
+*.mkv   -text
+*.ts    -text
+*.zip   -text
+*.7z    -text
+*.gz    -text
+*.tar   -text
+*.rar   -text
+
+###############################################################################
+# Executables and libraries
+###############################################################################
+*.exe   -text
+*.dll   -text
+*.lib   -text
+*.so    -text
+*.dylib -text
+*.solib -text
