@@ -6,33 +6,33 @@
 ###############################################################################
 # Binary files (never modify, never diff)
 ###############################################################################
-*.png   -text
-*.jpg   -text
-*.jpeg  -text
-*.bmp   -text
-*.gif   -text
-*.tga   -text
-*.psd   -text
-*.ico   -text
-*.ttf   -text
-*.pdf   -text
-*.mp3   -text
-*.aac   -text
-*.mp4   -text
-*.mkv   -text
-*.ts    -text
-*.zip   -text
-*.7z    -text
-*.gz    -text
-*.tar   -text
-*.rar   -text
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.bmp   binary
+*.gif   binary
+*.tga   binary
+*.psd   binary
+*.ico   binary
+*.ttf   binary
+*.pdf   binary
+*.mp3   binary
+*.aac   binary
+*.mp4   binary
+*.mkv   binary
+*.ts    binary
+*.zip   binary
+*.7z    binary
+*.gz    binary
+*.tar   binary
+*.rar   binary
 
 ###############################################################################
 # Executables and libraries
 ###############################################################################
-*.exe   -text
-*.dll   -text
-*.lib   -text
-*.so    -text
-*.dylib -text
-*.solib -text
+*.exe   binary
+*.dll   binary
+*.lib   binary
+*.so    binary
+*.dylib binary
+*.solib binary
