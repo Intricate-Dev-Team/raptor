@@ -44,5 +44,5 @@ ignore = []
 quote-style = "double"
 indent-style = "space"
 
-[tool.setuptools]
-include-package-data = true
+[tool.setuptools.package-data]
+"intricate-raptor" = ["raptor/bin/premake/**"]
