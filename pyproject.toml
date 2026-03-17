@@ -45,4 +45,4 @@ quote-style = "double"
 indent-style = "space"
 
 [tool.setuptools.package-data]
-"intricate-raptor" = ["raptor/bin/premake/**"]
+"raptor" = ["raptor/bin/premake/**"]
